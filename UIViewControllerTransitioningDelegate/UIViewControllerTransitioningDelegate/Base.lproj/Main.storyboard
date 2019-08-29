@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIViewControllerTransitioningDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG4-0k-wmh">
+                                <rect key="frame" x="133" y="286" width="108" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="23d-rF-HAK"/>
+                                    <constraint firstAttribute="height" constant="95" id="9Nt-ts-PRn"/>
+                                </constraints>
+                                <state key="normal" title="Present"/>
+                                <connections>
+                                    <segue destination="OuL-nt-2Up" kind="presentation" identifier="present.view.controller" id="ZK8-RE-u7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IG4-0k-wmh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TTZ-Nm-lct"/>
+                            <constraint firstItem="IG4-0k-wmh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="usZ-Dc-RFA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+        <!--Present View Controller-->
+        <scene sceneID="CxL-8W-lyM">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="OuL-nt-2Up" customClass="PresentViewController" customModule="UIViewControllerTransitioningDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZl-Ey-mKp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7on-wP-Tyj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4V-D1-hGd">
+                                <rect key="frame" x="67" y="213.5" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJM-eJ-HuN">
+                                        <rect key="frame" x="71" y="71" width="99" height="99"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="99" id="I9p-KF-TeJ"/>
+                                            <constraint firstAttribute="width" constant="99" id="jl9-zz-htE"/>
+                                        </constraints>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="hideButtonTapWithSender:" destination="OuL-nt-2Up" eventType="touchUpInside" id="JET-GO-ysI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="89v-8Z-pbJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="MXa-N1-5y2"/>
+                                    <constraint firstItem="cJM-eJ-HuN" firstAttribute="centerX" secondItem="m4V-D1-hGd" secondAttribute="centerX" id="eqa-HI-YW2"/>
+                                    <constraint firstItem="cJM-eJ-HuN" firstAttribute="centerY" secondItem="m4V-D1-hGd" secondAttribute="centerY" id="iqw-ym-29u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7on-wP-Tyj" firstAttribute="leading" secondItem="YnG-2y-bJ2" secondAttribute="leading" id="1DE-Z1-cUh"/>
+                            <constraint firstItem="YnG-2y-bJ2" firstAttribute="bottom" secondItem="7on-wP-Tyj" secondAttribute="bottom" id="JmK-4T-TkN"/>
+                            <constraint firstItem="7on-wP-Tyj" firstAttribute="top" secondItem="YnG-2y-bJ2" secondAttribute="top" id="OhL-sf-qDh"/>
+                            <constraint firstItem="YnG-2y-bJ2" firstAttribute="trailing" secondItem="7on-wP-Tyj" secondAttribute="trailing" id="ick-dr-CYI"/>
+                            <constraint firstItem="m4V-D1-hGd" firstAttribute="centerX" secondItem="uZl-Ey-mKp" secondAttribute="centerX" id="nFk-aZ-DhT"/>
+                            <constraint firstItem="m4V-D1-hGd" firstAttribute="centerY" secondItem="uZl-Ey-mKp" secondAttribute="centerY" id="xgr-de-Uru"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YnG-2y-bJ2"/>
+                    </view>
+                    <connections>
+                        <outlet property="blindView" destination="7on-wP-Tyj" id="fwj-2L-yVc"/>
+                        <outlet property="menuView" destination="m4V-D1-hGd" id="vU1-Ig-G6i"/>
+                        <outlet property="menuViewCenterYConstraint" destination="xgr-de-Uru" id="uDK-NR-cNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Iu-RP-Idg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.8" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
